@@ -1,0 +1,17 @@
+//- creating a master layout for all the templates to use.
+ Appending an equals sign to title is one of the methods that Pug
+ uses for interpolation. We  use this to pass the title dynamically to each template
+ the block is content that the chilD template can replace
+ 
+doctype html
+html
+  head
+    title= `${title}`
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/styles.css')
+
+  body
+    div.container.listing-reg
+      h1 My Amazing App
+
+      block content
